@@ -9,8 +9,10 @@ function getQueryVariable(variable) {
 		if(keyValPair[0] == variable) {
 
 			return keyValPair[1];
-			// console.log(keyValPair[1]);
-
-		}
+		} 
 	}
 }
+
+console.log('Search Term: ' + getQueryVariable('searchTerm'));
+//alert('Search Term: ' + getQueryVariable('searchTerm'));
+
