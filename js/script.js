@@ -1,4 +1,7 @@
-function getQueryVariable(variable) {
+
+document.getElementById("form").addEventListener("submit", getFormValue);
+
+function getFormValue (variable) {
 
 	var query = window.location.search.substring(1);
 	var variables = query.split('&');
@@ -11,8 +14,11 @@ function getQueryVariable(variable) {
 			return keyValPair[1];
 		} 
 	}
+
 }
 
-console.log('Search Term: ' + getQueryVariable('searchTerm'));
-//alert('Search Term: ' + getQueryVariable('searchTerm'));
+	var frequency = getFormValue('frequency');
+	var bandwidth = getFormValue('bandwidth');
+	var gain = getFormValue('gain');
 
+console.log('frequency=' + frequency + ' bandwidth=' + bandwidth + ' gain=' + gain);
